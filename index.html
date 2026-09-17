@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Student Management System</h1>
+      <p>Complete CRUD Web Application</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2 id="formTitle">Add Student</h2>
+      <form id="studentForm">
+        <input type="hidden" id="studentId">
+        <div class="grid">
+          <div>
+            <label>Student Name</label>
+            <input id="name" required maxlength="100" placeholder="Enter name">
+          </div>
+          <div>
+            <label>Register Number</label>
+            <input id="register_number" required maxlength="30" placeholder="Enter register number">
+          </div>
+          <div>
+            <label>Department</label>
+            <select id="department" required>
+              <option value="">Select department</option>
+              <option>CSE</option>
+              <option>IT</option>
+              <option>ECE</option>
+              <option>EEE</option>
+              <option>MECH</option>
+              <option>CIVIL</option>
+            </select>
+          </div>
+          <div>
+            <label>Email</label>
+            <input type="email" id="email" required placeholder="student@example.com">
+          </div>
+          <div>
+            <label>Phone</label>
+            <input id="phone" required pattern="[0-9]{10}" maxlength="10" placeholder="10 digit number">
+          </div>
+        </div>
+        <div class="actions">
+          <button type="submit" class="primary">Save Student</button>
+          <button type="button" id="cancelBtn" class="secondary hidden">Cancel Edit</button>
+        </div>
+        <p id="message"></p>
+      </form>
+    </section>
+
+    <section class="card">
+      <div class="list-header">
+        <h2>Student Records</h2>
+        <input id="search" placeholder="Search by name, register number or department">
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Register No.</th>
+              <th>Department</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="studentTable"></tbody>
+        </table>
+      </div>
+      <p id="empty">No student records found.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

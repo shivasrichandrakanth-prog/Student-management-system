@@ -1,0 +1,121 @@
+{
+  "info": {
+    "name": "Student Management CRUD API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET - All Students",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/students/",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "students"
+          ]
+        }
+      }
+    },
+    {
+      "name": "POST - Create Student",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\": \"Arun\", \"register_number\": \"101\", \"department\": \"CSE\", \"email\": \"arun@example.com\", \"phone\": \"9876543210\"}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/students/",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "students"
+          ]
+        }
+      }
+    },
+    {
+      "name": "GET - One Student",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/students/1/",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "students",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "PUT - Update Student",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\": \"Arun Kumar\", \"register_number\": \"101\", \"department\": \"IT\", \"email\": \"arun@example.com\", \"phone\": \"9876543210\"}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/students/1/",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "students",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "DELETE - Student",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/students/1/",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "students",
+            "1"
+          ]
+        }
+      }
+    }
+  ]
+}
